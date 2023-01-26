@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox  </title>
+     
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+        }
+        #wrapper{
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto ;
+        }
+        .container{
+            max-width: 1200px;
+            margin:0 auto;
+            padding: 20px;
+
+        }
+        .container h1{
+            margin: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 3rem;
+        }
+        .gallary{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }  
+     .card{
+            width: 32%;
+            position: relative;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card img{
+            min-height: 100%;
+            width: 100%;
+            filter: grayscale(100%);
+            box-shadow: 0 0 20px #333;
+            object-fit: cover ;
+        }
+        .card:hover{
+            transform: scale(1.03);
+            filter: drop-shadow(0 0 10px #333);
+             transition: 0.3s;
+
+        }
+        .card:hover img{
+            filter: grayscale(0%);
+
+        }
+        .card figcaption{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 25px;
+            width: 100px;
+            height: 20px;
+            font-size: 16px;
+            color: #fff;
+            opacity: 0;
+            border-radius: 0 0 10px 10px;
+           background: linear-gradient(0deg , rgb(0,0,0,0.5), rgb(255,255,255));
+           transition: 0.3s;
+
+
+        }
+        .card:hover figcaption{
+            opacity: 1;
+            transform: scale(1.03);
+
+        }
+        
+         
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+       <div class="container">
+        <h1> My Gallary </h1>
+        <div class="gallary">
+            <figure class="card">
+                <img src="th.jpeg">
+                <figcaption>Image1</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="img2.jpeg" >
+                <figcaption>Image2</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="img3.jpeg" >
+                <figcaption>Image3</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="img8.jpeg">
+                <figcaption>Image4</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="img7.jpeg" >
+                <figcaption>Image5</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="img6.jpeg" >
+                <figcaption>Image6</figcaption>
+            </figure>
+            
+       </div> 
+    </div>
+    
+</body>
+</html>
